@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3434921B-0197-4827-B519-60A1D27D3C3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnderTests</RootNamespace>
+    <AssemblyName>UnderTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AutoIt3\AutoItX\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoItX3.PowerShell">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AutoIt3\AutoItX\AutoItX3.PowerShell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriverBackedSelenium.3.7.0\lib\net45\Selenium.WebDriverBackedSelenium.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="WebDriver, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.7.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.7.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,053%29ValidBigDateRange.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,071%29AddDriverCanceled.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,070%29AddDriverSuccessful.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,072%29AddDriverEmptyInputFields.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,073%29EditDriverSuccessful.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,074%29EditUserCancelEdit.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,075%29ResendVerificationEmail.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,076%29CancelResendVerificationEmail.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,077%29CancelDriverBlock.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,078%29DriverBlockSuccess.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,079%29CancelBlockStatusChange.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,080%29CancelDeleteDriverFromEditDriver.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,081%29DeleteDriverFromEditDriver.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,082%29DeleteDriver.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,083%29SearchFieldTestSuccessful.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,084%29SearchFieldTestCanceled.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,012%29SuccessfulProfileUpdate.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,013%29FirstNameValidFormat.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,014%29FirstNameSpecialChars.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,015%29FirstNameEmptyField.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,016%29FirstNameBlankSpace.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,017%29FirstName200chars+.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,018%29LastNameValidFormat.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,019%29LastNameSpecialChars.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,020%29LastNameEmptyField.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,021%29LastNameBlankSpace.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,022%29LastName200chars+.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,023%29ChooseCountryOptionOne.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,025%29ChooseCountryOptionThree.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,024%29ChooseCountryOptionTwo.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,026%29MobileNumberSevenDigits.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,027%29MobileNumberFifteenDigits.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,028%29MobileNumberEmptyField.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,029%29MobileNumberSixDigits.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,031%29MobileNumberBlankSpace.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,030%29MobileNumberSixteenDigits.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,032%29MobileNumberSixCharacters.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,033%29MobileNumberSevenCharacters.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,034%29MobileNumberSixteenCharacters.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,035%29EmailChangeValid.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,036%29EmailChangeWrongPassword.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,038%29EmailChangeNotValidated2.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,037%29EmailChangeNotValidated.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,039%29EmailChangedTwiceSuccessful.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,040%29DeleteProfilePhotoSuccess.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,041%29DeleteProfilePhotoCancel.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,042%29EditProfilePictureSuccess.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,043%29EditProfilePictureCancel.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,044%29EditProfilePictureClose.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,045%29EditProfilePictureUnsupportedFormat.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,046%29EditProfilePictureSupportedFormat9MB.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,047%29ChangePasswordSuccess.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,048%29ChangePasswordNotMatching.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,049%29ChangePasswordInvalidPassword.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,050%29ChangePasswordOldAndNewSame.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,051%29ChangePasswordInvalidNewPassword.cs" />
+    <Compile Include="%28 5c %29 AgentProfilePageTests\%285,052%29ChangePasswordInvalidData.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,003%29ValidRideRequest.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,004%29UserCancelsRideRequest.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,005%29AnotherAgentTakesRideRequest.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,006%29UserRideRequestTimesOut.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,007%29InvalidVehicleID.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,008%29InvalidCharactersVehicleID.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,009%29EmptyVehiceIDField.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,010%29UnavailableDriverRequest.cs" />
+    <Compile Include="%28 5b %29 Dashboard-ControlCenterTests\%285,011%29DriverRequestAlreadyAccepted.cs" />
+    <Compile Include="%28 5a %29 Dashboard-MainPageTests\%285,001%29PageConentManagingAdminUser.cs" />
+    <Compile Include="%28 5a %29 Dashboard-MainPageTests\%285,002%29PageContentAdminUser.cs" />
+    <Compile Include="%28 5a %29 Dashboard-MainPageTests\CDP COUNT.cs" />
+    <Compile Include="%28 4 %29 ForgotPasswordPageTests\%284,01%29OpenForgotPasswordPage.cs" />
+    <Compile Include="%28 4 %29 ForgotPasswordPageTests\%284,02%29UnexistingEmailReset.cs" />
+    <Compile Include="%28 4 %29 ForgotPasswordPageTests\%284,03%29InvalidEmailFormatReset.cs" />
+    <Compile Include="%28 4 %29 ForgotPasswordPageTests\%284,04%29ValidEmailWrongUserGroup.cs" />
+    <Compile Include="%28 4 %29 ForgotPasswordPageTests\%284,05%29ValidEmailReset.cs" />
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,058%29PaymentFilterAll.cs" />
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,059%29PaymentFilterCash.cs" />
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,061%29PaymentFilterNoInvoice.cs" />
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,060%29PaymentFilterUnder.cs" />
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,062%29StatusFilterAll.cs" />
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,063%29StatusFilterCompleted.cs" />
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,064%29StatusFilterUserCanceled.cs" />
+    <Compile Include="%28 5d %29 HistoryPageTests\%285,065%29StatusFilterDriverCanceled.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,01%29ValidatePageContent.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,02%29UnexistingEmail.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,03%29InvalidEmailFormat.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,04%29EmptyLoginFields.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,05%29EmptyEmailValidPassword.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,06%29InvalidPasswordEmptyEmail.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,07%29ValidEmailEmptyPassword.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,08%29InvalidPasswordValidEmail.cs" />
+    <Compile Include="%28 3 %29 LoginPageTests\%283,09%29SuccessfulLogin.cs" />
+    <Compile Include="%28 5e %29 ReportsPageTests\%285,067%29TransactionsRideID.cs" />
+    <Compile Include="%28 5e %29 ReportsPageTests\%285,068%29TransactionsCSVValidation.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,01%29ValidatePageContent.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,02%29ValidPasswordFormat.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,03%29ValidConfirmPasswordFormat.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,04%29SpecialCharsPassword.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,05%29SpecialCharsConfirmPassword.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,06%29InvalidPasswordFormat.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,07%29InvalidConfirmPasswordFormat.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,08%29SuccessfulPasswordSet.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,09%29DifferentConfirmPassword.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,10%29DifferentConfirmPassword.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,11%29EmptyPasswordField.cs" />
+    <Compile Include="%28 2 %29 ResetPasswordPageTests\%282,12%29EmptyConfirmPasswordField.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,05%29SpecialCharsConfirmPassword.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,04%29SpecialCharsPassword.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,06%29InvalidPasswordFormat.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,07%29InvalidConfirmPasswordFormat.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,08%29SuccessfulPasswordSet.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,10%29DifferentConfirmPassword .cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,09%29DifferentConfirmPassword.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,11%29EmptyPasswordField.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,12%29EmptyConfirmPasswordField.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,01%29ValidatePageContent.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,03%29ValidConfirmPasswordFormat.cs" />
+    <Compile Include="%28 1 %29 SetPasswordPageTests\%281,02%29ValidPasswordFormat.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnderAppTests\UnderAppTests.csproj">
+      <Project>{22f1e679-1461-4ed0-9219-75327a987ef9}</Project>
+      <Name>UnderAppTests</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Drivers\chromedriver.exe" />
+    <Content Include="UnderTests.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AutoItX3Lib">
+      <Guid>{F8937E53-D444-4E71-9275-35B64210CC3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.33\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.33\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.33\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.33\build\Selenium.Chrome.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>
