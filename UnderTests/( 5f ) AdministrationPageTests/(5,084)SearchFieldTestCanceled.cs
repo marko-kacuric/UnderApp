@@ -18,7 +18,7 @@ namespace UnderTests.AdministrationPage
         public void _5_084_SearchFieldTestCanceled()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.searchField("t");
             Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-drivers/div[1]/div[1]/under-search/div/div[2]/div");
             var clearTextButton = Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-drivers/div[1]/div[1]/under-search/div/div[2]/div"));

@@ -186,6 +186,13 @@
     <Compile Include="%28 1 %29 SetPasswordPageTests\%281,09%29DifferentConfirmPassword.cs" />
     <Compile Include="%28 1 %29 SetPasswordPageTests\%281,11%29EmptyPasswordField.cs" />
     <Compile Include="%28 1 %29 SetPasswordPageTests\%281,12%29EmptyConfirmPasswordField.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,085%29DriversNameSorting.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,086%29DriversNameAndEmailSorting.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,088%29AddNewAgentValidInfo.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,089%29AddNewAgentCanceled.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,090%29AddAgentEmptyInfo.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,091%29EditAgentSuccessful.cs" />
+    <Compile Include="%28 5f %29 AdministrationPageTests\%285,092%29EditAgentCanceled.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="%28 1 %29 SetPasswordPageTests\%281,01%29ValidatePageContent.cs" />

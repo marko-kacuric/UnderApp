@@ -17,7 +17,7 @@ namespace UnderTests.AdministrationPage
         public void _5_072_AddDriverEmptyInputFields()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.openAddDriverModal();
             Pages.AdministrationPage.selectCountrySpain();
             Pages.AdministrationPage.addDriverEmpty("", "", "");

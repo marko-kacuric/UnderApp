@@ -16,7 +16,7 @@ namespace UnderTests.AdministrationPage
         public void _5_070_AddDriverSuccessful()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.openAddDriverModal();
             Pages.AdministrationPage.selectCountrySerbia();
             Pages.AdministrationPage.addDriverSuccessful("testDriverFirstName","testDriverLastName","testdriveremail");

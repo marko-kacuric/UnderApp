@@ -16,7 +16,7 @@ namespace UnderTests.AdministrationPage
         public void _5_076_CancelResendVerificationEmail()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.openEditDriverModal();
             Pages.AdministrationPage.cancelResendVerificationEmail();
         }

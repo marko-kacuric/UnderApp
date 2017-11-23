@@ -18,7 +18,7 @@ namespace UnderTests.AdministrationPage
         public void _5_082_DeleteDriver()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Thread.Sleep(150);
             int rowCountBeforeDelete = Browser.Driver.FindElements(By.TagName("tr")).Count;
             Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-drivers/div[2]/div[1]/table/tbody/tr[10]/td[5]")).Click();         

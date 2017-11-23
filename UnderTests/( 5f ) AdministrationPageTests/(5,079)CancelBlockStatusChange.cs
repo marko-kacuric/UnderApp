@@ -17,7 +17,7 @@ namespace UnderTests.AdministrationPage
         public void _5_079_CancelBlockStatusChange()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.openEditDriverModal();
             bool blockedStatus = Browser.Driver.FindElement(By.CssSelector(".add-edit-checkbox")).Selected;
 

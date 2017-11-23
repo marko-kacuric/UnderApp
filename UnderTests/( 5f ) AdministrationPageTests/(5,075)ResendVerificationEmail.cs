@@ -17,7 +17,7 @@ namespace UnderTests.AdministrationPage
         public void _5_075_ResendVerificationEmail()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.openEditDriverModal();
             Pages.AdministrationPage.resendVerificationEmail();
         }

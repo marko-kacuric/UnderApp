@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading;
 using System;
+
 namespace UnderAppTests.Pages
 {
     public class AdministrationPage
@@ -12,13 +13,15 @@ namespace UnderAppTests.Pages
             Browser.GoTo("https://agent.under.taxi/#/login", false);
         }
 
-        public void logInAndNavigateToAdministrationPage()
+        public void logInAndNavigateToAdministrationPageDrivers()
         {
             Pages.Login.LogIn("marko.kacuric@p3-group.com", "Test1!@#$%^&*()_+-=[]{]';:,./|<>`~üöäÄÜÖß");
             Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-user-header/div/div[2]/div/div[2]/button[5]");
             Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-user-header/div/div[2]/div/div[2]/button[5]")).Click();
         }
 
+
+        // DRIVERS tests on ADMINISTRATION PAGE
 
         public void selectCountryGermany()
         {
@@ -263,6 +266,195 @@ namespace UnderAppTests.Pages
             var searchField = Browser.Driver.FindElement(By.CssSelector(".under-search-input"));
             searchField.SendKeys(text);           
         }
+
+
+
+        // AGENTS tests on ADMINISTRATION PAGE
+
+        public void logInAndNavigateToAdministrationPageAgents()
+        {
+            Pages.Login.LogIn("marko.kacuric@p3-group.com", "Test1!@#$%^&*()_+-=[]{]';:,./|<>`~üöäÄÜÖß");
+            Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-user-header/div/div[2]/div/div[2]/button[5]");
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-user-header/div/div[2]/div/div[2]/button[5]")).Click();
+            Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[1]/div[2]/button[2]");
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[1]/div[2]/button[2]")).Click();
+        }
+
+
+        public void chooseCountryGermany()
+        {
+            Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/button");
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/button")).Click();
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/ul/li[1]/div")).Click();
+        }
+
+        public void chooseCountrySerbia()
+        {
+            Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/button");
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/button")).Click();
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/ul/li[2]/div")).Click();
+        }
+
+        public void chooseCoutrySpain()
+        {
+            Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/button");
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/button")).Click();
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[1]/under-country-calling-codes/div/ul/li[3]/div")).Click();
+        }
+
+        public void openAddAgentModal()
+        {
+            Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/div[1]/div[2]/button");
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/div[1]/div[2]/button")).Click();
+        }
+
+        public void addAgentSuccessful()
+        {
+            Random rnd = new Random();
+            int number = rnd.Next(100, 999);
+            string domen = "@testmail.com";
+
+            var firstNameField = Browser.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[3]/div[1]/input"));
+            var lastNameField = Browser.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[3]/div[2]/input"));
+            var mobileNumberField = Browser.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[2]/input"));
+            var emailField = Browser.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[7]/div/input"));
+
+            chooseCountrySerbia();
+
+            string firstName = "agentFirstName" + number;
+            firstNameField.SendKeys(firstName);
+            Thread.Sleep(100);
+            Assert.IsFalse(firstNameField.GetAttribute("class").ToString().Contains("warning-sign"));
+            string lastName = "agentLastName" + number;
+            lastNameField.SendKeys(lastName);
+            Thread.Sleep(100);
+            Assert.IsFalse(lastNameField.GetAttribute("class").ToString().Contains("warning-sign"));
+            string mobileNumber = "" + number + number + number;
+            mobileNumberField.SendKeys(mobileNumber);
+            Thread.Sleep(100);
+            Assert.IsFalse(mobileNumberField.GetAttribute("class").ToString().Contains("warning-sign"));
+            string email = "agentemail" + number + domen;
+            emailField.SendKeys(email);
+            Thread.Sleep(100);
+            Assert.IsFalse(emailField.GetAttribute("class").ToString().Contains("warning-sign"));
+
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[3]/button[2]")).Click();
+
+            Thread.Sleep(500);
+
+            IWebElement table = Browser.Driver.FindElement(By.TagName("tbody"));
+
+            Assert.IsTrue(table.Text.Contains(firstName));
+            Assert.IsTrue(table.Text.Contains(lastName));
+            Assert.IsTrue(table.Text.Contains(mobileNumber));
+            Assert.IsTrue(table.Text.Contains(email));
+
+        }
+
+        public void addAgentCanceled()
+        {
+            Random rnd = new Random();
+            int number = rnd.Next(100, 999);
+            string domen = "@testmail.com";
+
+            var firstNameField = Browser.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[3]/div[1]/input"));
+            var lastNameField = Browser.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[3]/div[2]/input"));
+            var mobileNumberField = Browser.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[5]/div[2]/input"));
+            var emailField = Browser.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div/div[1]/div[7]/div/input"));
+
+            chooseCountrySerbia();
+
+            string firstName = "agentFirstName" + number;
+            firstNameField.SendKeys(firstName);
+            Thread.Sleep(100);
+            Assert.IsFalse(firstNameField.GetAttribute("class").ToString().Contains("warning-sign"));
+            string lastName = "agentLastName" + number;
+            lastNameField.SendKeys(lastName);
+            Thread.Sleep(100);
+            Assert.IsFalse(lastNameField.GetAttribute("class").ToString().Contains("warning-sign"));
+            string mobileNumber = "" + number + number + number;
+            mobileNumberField.SendKeys(mobileNumber);
+            Thread.Sleep(100);
+            Assert.IsFalse(mobileNumberField.GetAttribute("class").ToString().Contains("warning-sign"));
+            string email = "agentemail" + number + domen;
+            emailField.SendKeys(email);
+            Thread.Sleep(100);
+            Assert.IsFalse(emailField.GetAttribute("class").ToString().Contains("warning-sign"));
+
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[3]/button[1]")).Click();
+
+            Thread.Sleep(500);
+
+            IWebElement table = Browser.Driver.FindElement(By.TagName("tbody"));
+
+            Assert.IsFalse(table.Text.Contains(firstName));
+            Assert.IsFalse(table.Text.Contains(lastName));
+            Assert.IsFalse(table.Text.Contains(mobileNumber));
+            Assert.IsFalse(table.Text.Contains(email));
+        }
+
+
+
+        public void openEditAgentModal()
+        {
+            Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/div[2]/div[1]/table/tbody/tr[9]/td[4]");
+            Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/div[2]/div[1]/table/tbody/tr[9]/td[4]")).Click();
+            Browser.WaitForElement("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]");
+        }
+
+        public void editAgentSuccessful()
+        {
+            Random rnd = new Random();
+            int number = rnd.Next(100, 500);
+
+            var firstNameField = Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div[1]/div[1]/div[3]/div[1]/input"));
+            var lastNameField = Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div[1]/div[1]/div[3]/div[2]/input"));
+
+            string firstName = "editedFirstName" + number;
+            string lastName = "editedLastName" + number;
+
+            firstNameField.Clear();
+            firstNameField.SendKeys(firstName);
+            lastNameField.Clear();
+            lastNameField.SendKeys(lastName);
+
+            Browser.Driver.FindElement(By.CssSelector(".under-save")).Click();
+            Thread.Sleep(250);
+            IWebElement table = Browser.Driver.FindElement(By.TagName("tbody"));
+            Assert.IsTrue(table.Text.Contains(firstName));
+            Assert.IsTrue(table.Text.Contains(lastName));
+
+        }
+        
+        public void editAgentCanceled()
+        {
+            Random rnd = new Random();
+            int number = rnd.Next(100, 500);
+
+            var firstNameField = Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div[1]/div[1]/div[3]/div[1]/input"));
+            var lastNameField = Browser.Driver.FindElement(By.XPath("/html/body/under-agent/under-agent-dashboard/div/div[2]/div/div/div/under-administration/div/div/div[2]/div[2]/under-administration-agents/under-add-edit-agent-modal/div/div/div/div/div[2]/div[1]/div[1]/div[3]/div[2]/input"));
+
+            string firstName = "editedFirstName" + number;
+            string lastName = "editedLastName" + number;
+
+            firstNameField.Clear();
+            firstNameField.SendKeys(firstName);
+            lastNameField.Clear();
+            lastNameField.SendKeys(lastName);
+
+            Browser.Driver.FindElement(By.CssSelector(".edit-footer-settings > button:nth-child(1)")).Click();
+            Thread.Sleep(250);
+            IWebElement table = Browser.Driver.FindElement(By.TagName("tbody"));
+            Assert.IsFalse(table.Text.Contains(firstName));
+            Assert.IsFalse(table.Text.Contains(lastName));
+
+        }
+
+
+
+
+
+
 
     }
 }

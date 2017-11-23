@@ -15,7 +15,7 @@ namespace UnderTests.AdministrationPage
         public void _5_071_AddDriverCanceled()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.openAddDriverModal();
             Pages.AdministrationPage.selectCountrySpain();
             Pages.AdministrationPage.addDriverCanceled("testDriverFirstName", "testDriverLastName", "testdriveremail");

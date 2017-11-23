@@ -17,7 +17,7 @@ namespace UnderTests.AdministrationPage
         public void _5_078_DriverBlockSuccess()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.openEditDriverModal();
             var checkboxStatus = Browser.Driver.FindElement(By.CssSelector(".add-edit-checkbox"));
             if (!checkboxStatus.Selected)

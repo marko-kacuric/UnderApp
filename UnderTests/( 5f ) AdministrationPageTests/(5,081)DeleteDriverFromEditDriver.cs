@@ -18,7 +18,7 @@ namespace UnderTests.AdministrationPage
         public void _5_081_DeleteDriverFromEditDriver()
         {
             Pages.AdministrationPage.GoTo();
-            Pages.AdministrationPage.logInAndNavigateToAdministrationPage();
+            Pages.AdministrationPage.logInAndNavigateToAdministrationPageDrivers();
             Pages.AdministrationPage.openEditDriverModal();
             string firstNameField = Browser.Driver.FindElement(By.CssSelector("div.col-xs-8:nth-child(1) > div:nth-child(3) > div:nth-child(1) > input:nth-child(1)")).Text;
             string emailField = Browser.Driver.FindElement(By.CssSelector("div.row:nth-child(7) > div:nth-child(1) > input:nth-child(1)")).Text;
